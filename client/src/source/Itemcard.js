@@ -10,7 +10,7 @@ const ItemCard = ({ item }) => {
       return;
     }
 
-    const response = await fetch(`http://localhost:8082/verse/cart`, {
+    const response = await fetch(`https://e-commerce-mern-backend-79zf.onrender.com/verse/cart`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
