@@ -9,7 +9,10 @@ const app = express()
 mongoose.connect(config.mongoose.url).then(()=>{
     console.log("connect to mongodb")
 })
-app.use(cors({ origin: 'https://frabjous-starship-262ea3.netlify.app/', credentials: true }));
+app.use(cors({ 
+    origin: 'https://frabjous-starship-262ea3.netlify.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true }));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(passport.initialize())
